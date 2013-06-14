@@ -1,0 +1,28 @@
+%Makroer til sangbogen
+\newcommand{\tm}{\texttrademark\ }
+
+\newcommand\Vtextvisiblespace[1][.3em]{%
+  \mbox{\kern.06em\vrule height.3ex}%
+  \vbox{\hrule width#1}%
+  \hbox{\vrule height.3ex}}
+
+\newcommand{\sang}[4]{
+    % Faktisk styling til titel, kunstner, melodi, sang.
+
+    \begin{center}
+        \subsection{#1}
+        #2
+
+        \textit{#3} % Mere token skævhed!
+    \end{center}
+    \begin{multicols}{2}
+        #4
+    \end{multicols}
+    \vspace{0.5cm}
+}
+
+% Marker omkvæde
+\newcommand{\omkv}[1]{{\em #1}}
+
+% Kommentar inde i sangen, mangler faktisk styling, placeholder SKÆVHED!
+\newcommand{\kom}[1]{\em{#1}}
