@@ -4,6 +4,10 @@ Den Ny' Sangbog
 
 Nyt og simplere system til at skabe årets rusturs sangebog.
 
+Målet er at lave et system i et enkelt sprog (dvs. 2! LaTeX og Python) som er
+nemmere at vedligeholde for de næste. Så kan vi også slippe for chord! Fy for
+den lede!
+
 BRUG
 ---
 Hver sang er en .tex fil i "sange" mappen.
@@ -25,5 +29,5 @@ Eksempel på sang fil:
  Filnavnet er ligemeget, men det er flinkt hvis man giver den et sigende navn,
  f.eks. titlen på sangen, uden spaces? ;)
 
- Der kan indsættes arbitrer \TeX kode i alle sange. Der er ingen garanti for
+ Der kan indsættes arbitrær \TeX kode i alle sange. Der er ingen garanti for
  hvordan systemet håndtere skidtet!
