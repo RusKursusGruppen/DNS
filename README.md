@@ -1,4 +1,5 @@
 DNS
 ===
+Den Ny' Sangbog
 
-DNS
+Nyt og simplere system til at skabe årets rusturs sangebog.
