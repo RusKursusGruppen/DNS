@@ -11,7 +11,7 @@ filTilInfo = {}
 
 # regexp der fanger sangmakroen og giver en tuple af strenge.
 # jf. \sang makroen er outputet (titel,kunstner,melodi,tekst)
-regex = re.compile('sang\{(.*)\}.\{(.*)\}.\{(.*)\}.\{(.*)\}.',re.DOTALL)
+regex = re.compile('sang\{(.*)\}.\{(.*)\}.\{(.*)\}.\{(.*)\}.*',re.DOTALL)
 
 def hoved():
     args = sys.argv
