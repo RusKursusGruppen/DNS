@@ -18,16 +18,44 @@ def hoved():
     for fil in os.listdir("./sange"):
         if fil.endswith(".tex"):
             analyserFil(fil)
-    sorteredeNoegler = sorterNoegler(titelTilFil.iterkeys())
-    skafTeksterITex(sorteredeNoegler)
+    sorteredeNoegler = sorterTitler(titelTilFil.keys())
     
-def sorterNoegler(noegler):
-    return sorted(noegler)
+    teksterITex = skafTeksterITex(sorteredeNoegler)
+    
+    
+def sorterTitler(noegler):
+    foerste = sorted(noegler)
+    index = []
+
+    # LORT : For at lave listen sød skal den fyldes lidt her. BEKLAGER!
+    i = 0
+    while i < 45:
+        index.append("")
+        i = i + 1
+    i = 0
+    # SLUT PÅ LORT
+
+    while i < (len(foerste)):
+        titel = foerste[i]
+        if titel == "I Morgen Er Verden Vor":
+            index[42] = titel
+        elif titel == "DAT62(1/2)80 Slagsang":
+            index[43] = titel
+        elif titel == "Hey ho for våbenfysik":
+            index[44] = titel
+        else:
+            while i > 41 and i < 45:
+                i = i + 1
+            index[i] = titel
+        i = i + 1
+    return index
     
 def skafTeksterITex(noegler):
     TeX = ""
     for titel in noegler:
-        TeX = TeX + "\\input{sange/" + titelTilFil[titel] +"}\n"
+        if titel <> "":
+            TeX = TeX + "\\input{sange/" + titelTilFil[titel] +"}\n"
+    return TeX
 
 def analyserFil(filnavn):
     fil = open("./sange/" + filnavn,"r")
